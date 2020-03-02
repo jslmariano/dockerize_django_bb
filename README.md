@@ -24,12 +24,12 @@ Requirements:
 ### Users
 
 * User - Password
-** root - admin123 (superuser)
-** test1 - abcd1234
-** zjordan - abcd1234
-** test2 - abcd1234
-** test3 - abcd1234
-** reyeskevin - abcd1234
+* * admin - admin (superuser)
+* * test1 - abcd1234
+* * zjordan - abcd1234
+* * test2 - abcd1234
+* * test3 - abcd1234
+* * reyeskevin - abcd1234
 
 
 ### TROUBLESHOOTING
