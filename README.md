@@ -19,7 +19,7 @@ Requirements:
 1. Build images - `docker-compose build` (This may take a while for 1st time, go grab your coffee :) )
 1. Start services - `docker-compose up`
 1. Browse your applciation on - `localhost`
-1. Test scripts are available, `docker-compose exec -it dockerize_capsl_bb_web_1 /usr/local/bin/python manage.py test`
+1. Test scripts are available, `docker exec -it dockerize_capsl_bb_web_1 /usr/local/bin/python manage.py test`
 
 ### Users
 

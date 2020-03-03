@@ -9,11 +9,12 @@ services:
     links:
       - postgres:postgres
     volumes:
-      - ./web/static:/usr/src/app/static
+      - ./web:/usr/src/app
     env_file: .env
     environment:
       DEBUG: 'true'
-    command: /usr/local/bin/gunicorn config.wsgi:application -w 2 -b :8000
+    command: /usr/local/bin/gunicorn config.wsgi:application -w 2 -b :8000 --reload
+    # command: python manage.py runserver 0.0.0.0:8000
 
   nginx:
     restart: always
@@ -21,7 +22,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /www/static
+      # - /www/static
       - ./web/static:/usr/src/app/static
     links:
       - web:web
@@ -44,5 +45,5 @@ services:
 
 volumes:
   web-django:
-  web-static:
+  # web-static:
   pgdata:
