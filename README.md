@@ -10,6 +10,9 @@ Requirements:
 
 - Please see .env file for database configuration
 - No need to import dummy database it wll be handled by `docker-compose`
+- *Email* setup is for local only and not for production please see console logs for email confirmations.
+- - If you bring up your docker in background please use `docker-compose logs` to peek on console
+
 
 ### Local Dev Instructions
 
