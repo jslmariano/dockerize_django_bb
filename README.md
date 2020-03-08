@@ -25,6 +25,15 @@ Requirements:
 1. Always run mmigration for new tables ` docker exec -it dockerize_capsl_bb_web_1 /usr/local/bin/python manage.py migrate`
 1. Test scripts are available, `docker exec -it dockerize_capsl_bb_web_1 /usr/local/bin/python manage.py test`
 
+### Restful API
+1. Download and install postman here https://www.postman.com/downloads/
+1. If you wanted to sign-in you can use your google account but this is optional
+1. Open you postman then click "Import" > "Import From Link"
+1. Paste this URL https://www.postman.com/collections/86f7e40f157e8aff956c
+1. Click "Import"
+1. On your left side panel you should see the "DJango Board" in Collections tab
+
+
 ### Users
 
 * User - Password
