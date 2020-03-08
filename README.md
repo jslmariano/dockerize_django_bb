@@ -26,12 +26,25 @@ Requirements:
 1. Test scripts are available, `docker exec -it dockerize_capsl_bb_web_1 /usr/local/bin/python manage.py test`
 
 ### Restful API
+1. Go to https://documenter.getpostman.com/view/5184773/SzRxVVSF?version=latest and Click "Run in postman"
+1. If your postman opens choose "Django Board | Local" as environment to your top right corner
+1. If the 2 above does not work, proceed below to the manual
 1. Download and install postman here https://www.postman.com/downloads/
 1. If you wanted to sign-in you can use your google account but this is optional
 1. Open you postman then click "Import" > "Import From Link"
 1. Paste this URL https://www.postman.com/collections/86f7e40f157e8aff956c
 1. Click "Import"
 1. On your left side panel you should see the "DJango Board" in Collections tab
+1. Finally add environment variables
+1. Click the gear icon on top right corner
+1. Click "Add" button
+1. Type "Django Board | Local" as the environment name
+1. Variables are 
+```
+VARIABLE    | INITIAL VALUE    | CURRENT VALUE    |
+host        | localhost        | localhost        |
+token_auth  | (leave blank)    | (leave blank)    |
+```
 
 
 ### Users
