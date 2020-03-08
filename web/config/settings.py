@@ -40,11 +40,27 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',  # <- here
 
+    # Third-Party Apps
+    'rest_framework',
+    'rest_framework.authtoken',  # <-- Here
     'widget_tweaks',
 
+    # Apps api
+    'rest_api',
+
+    # main apps
     'accounts',
     'boards'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # <-- And here
+        # When you enable API versioning, the request.version attribute will contain a string
+        # that corresponds to the version requested in the incoming client request.
+    ],
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

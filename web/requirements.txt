@@ -8,6 +8,7 @@ django-messages==0.6.0
 django-nocaptcha-recaptcha==0.0.20
 django-pagination-py3==1.1.2
 django-widget-tweaks==1.4.5
+djangorestframework
 Faker==4.0.1
 gunicorn==20.0.4
 Markdown==3.2.1

@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from django.conf.urls import url
 
 from accounts import views as accounts_views
 from boards import views
-
 
 # urlpatterns = [
 #     path('admin/', admin.site.urls),
@@ -63,6 +62,9 @@ urlpatterns = [
 
     url(r'^boards/(?P<pk>\d+)/topics/(?P<topic_pk>\d+)/posts/(?P<post_pk>\d+)/edit/$',
         views.PostUpdateView.as_view(), name='edit_post'),
+
+    re_path(r'^api/(?P<version>[v1|v2]+)/', include('rest_api.urls')),
+    # re_path('api/(?P<version>(v1|v2))/', include('rest_api.urls')),
 
     url(r'^admin/', admin.site.urls),
 ]
