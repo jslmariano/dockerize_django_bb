@@ -1,4 +1,4 @@
-## CAPSL Bulletin Board Development With Docker Compose
+## DJango Bulletin Board Development With Docker Compose
 
 Requirements:
 
