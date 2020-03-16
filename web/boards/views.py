@@ -9,14 +9,23 @@ from django.utils import timezone
 from django.utils.decorators import method_decorator
 from django.urls import resolve, reverse
 
+from redis import Redis
+
 from .forms import NewTopicForm, PostForm
 from .models import Board, Post, Topic
 
+redis = Redis(host='redis', port=6379)
 
 class BoardListView(ListView):
     model = Board
     context_object_name = 'boards'
     template_name = 'home.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(BoardListView, self).get_context_data(*args, **kwargs)
+        counter = redis.incr('counter')
+        context["counter"] = counter
+        return context
 
 class TopicListView(ListView):
     model = Topic
