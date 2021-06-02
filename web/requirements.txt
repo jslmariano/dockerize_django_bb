@@ -12,7 +12,7 @@ djangorestframework
 Faker==4.0.1
 gunicorn==20.0.4
 Markdown==3.2.1
-markdown2==2.3.8
+markdown2==2.4.0
 Pillow==7.0.0
 postmarkup==1.2.2
 psycopg2-binary==2.8.4
